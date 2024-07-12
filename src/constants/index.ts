@@ -53,3 +53,5 @@ export {
     codetubeDarkLogo,
     codetubeLightLogo,
 }
+
+export const searchLink: string = "search?part=snippet&q=";

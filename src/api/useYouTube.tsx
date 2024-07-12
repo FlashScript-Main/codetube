@@ -1,13 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { setThisDataType } from '../types';
 // import React from 'react';
 
-const useYouTube = (url: string, setThisData: any) => {
+const useYouTube = (url: string, setThisData: React.Dispatch<React.SetStateAction<setThisDataType[] | null>>) => {
 
     const options = {
-        // url: `https://youtube-v31.p.rapidapi.com/search?part=snippets&q=${url}`,
-        // url: `https://youtube-v31.p.rapidapi.com/search/part=snippet&q=${url}`,
-        url: `https://youtube-v31.p.rapidapi.com/search?q=${url}&part=snippet%2Cid`,
+        url: `https://youtube-v31.p.rapidapi.com/${url}`,
         params: {
             maxResults: '50',
         },
@@ -25,9 +24,6 @@ const useYouTube = (url: string, setThisData: any) => {
 
             return setThisData
         },
-        // refetchOnMount: true,
-        // enabled: false,
-        
     })
 
 }

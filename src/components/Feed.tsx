@@ -2,13 +2,15 @@ import { useState } from "react"
 import Sidebar from "./Sidebar"
 import Videos from "./Videos"
 import useYouTube from "../api/useYouTube";
+import { searchLink } from "../constants";
+import { setThisDataType } from "../types";
 
 const Feed = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("VS Code");
-    const [mainData, setMainData] = useState(null)
-
-    const { isFetched, refetch } = useYouTube(selectedCategory, setMainData)
+    const [mainData, setMainData] = useState< setThisDataType[] | null>(null)
+    
+    const { isFetched } = useYouTube(`${searchLink}${selectedCategory}`, setMainData)
 
     mainData && isFetched && console.log(mainData)
     return (
@@ -17,7 +19,6 @@ const Feed = () => {
                 <Sidebar 
                     selectedCategory={selectedCategory} 
                     setSelectedCategory={setSelectedCategory}
-                    refetch={refetch}
                 />
 
                 <h5 className="copyright mt-6 text-white">
