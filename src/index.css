@@ -90,3 +90,12 @@ a {
     width:200px;
   }
 }
+
+
+.filter-gray{
+  filter: invert(50%);
+}
+
+.filter-gray:hover{
+  filter: none;
+}

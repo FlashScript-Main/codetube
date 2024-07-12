@@ -1,18 +1,13 @@
-import { Route, Routes } from "react-router-dom"
-import { Navbar, Feed, VideoDetail, ChannelDetail, SearchFeed, NotFound } from './components';
+import { Navbar } from "./components"
+import MainRoutes from "./routes/MainRoutes"
+
 const App = () => {
 
     return (
         <div className="bg-black text-white">
             <Navbar />
 
-            <Routes>
-                <Route path="/" element={<Feed />} />
-                <Route path="/video/:id" element={<VideoDetail />} />
-                <Route path="/channel/:id" element={<ChannelDetail />} />
-                <Route path="/search/:searchTerm" element={<SearchFeed />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
+            <MainRoutes />
         </div>
     )
 
