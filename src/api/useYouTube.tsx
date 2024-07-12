@@ -1,9 +1,34 @@
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+// import React from 'react';
 
-const useYouTube = () => {
+const useYouTube = (url: string, setThisData: any) => {
 
-    return (
-        <div>useYouTube</div>
-    )
+    const options = {
+        // url: `https://youtube-v31.p.rapidapi.com/search?part=snippets&q=${url}`,
+        // url: `https://youtube-v31.p.rapidapi.com/search/part=snippet&q=${url}`,
+        url: `https://youtube-v31.p.rapidapi.com/search?q=${url}&part=snippet%2Cid`,
+        params: {
+            maxResults: '50',
+        },
+        headers: {
+            'x-rapidapi-key': import.meta.env.VITE_APP_RAPID_API_KEY,
+            'x-rapidapi-host': 'youtube-v31.p.rapidapi.com'
+        }
+    };
+
+
+    return useQuery({
+        queryKey: [url],
+        queryFn: async () => {
+            setThisData((await axios.request(options)).data.items)
+
+            return setThisData
+        },
+        // refetchOnMount: true,
+        // enabled: false,
+        
+    })
 
 }
 
