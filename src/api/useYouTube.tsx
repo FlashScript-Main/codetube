@@ -24,6 +24,8 @@ const useYouTube = (url: string, setThisData: React.Dispatch<React.SetStateActio
 
             return setThisData
         },
+        refetchIntervalInBackground: false
+        
     })
 
 }
