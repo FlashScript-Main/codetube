@@ -21,7 +21,7 @@ const Feed = () => {
                     </span>
                 </h1>
 
-                <Videos />
+                <Videos videos={[]} />
             </section>
         </main>
     )
