@@ -8,11 +8,11 @@ import { setThisDataType } from "../types";
 const Feed = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("VS Code");
-    const [mainData, setMainData] = useState< setThisDataType[] | null>(null)
+    const [mainData, setMainData] = useState<setThisDataType[] | null>([])
     
-    const { isFetched } = useYouTube(`${searchLink}${selectedCategory}`, setMainData)
+    const { isLoading } = useYouTube(`${searchLink}${selectedCategory}`, setMainData)
 
-    mainData && isFetched && console.log(mainData)
+    // mainData && isFetched && console.log(mainData)
     return (
         <main className="flex flex-col md:flex-row">
             <aside className="h-auto md:h-[92vh] border-r border-r-[#3d3d3d] px-0 md:px-8">
@@ -34,7 +34,7 @@ const Feed = () => {
                     </span>
                 </h1>
 
-                <Videos videos={[]} />
+                {!isLoading && <Videos videos={mainData} />}
             </section>
         </main>
     )

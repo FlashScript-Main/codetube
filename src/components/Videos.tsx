@@ -1,10 +1,11 @@
+import { VideosType } from '../types/index';
 
-type VideosProps = {
-    videos: string[]
-}
-const Videos = ({ videos }: VideosProps) => {
+
+
+const Videos = ({ videos }: VideosType) => {
 
     console.log(videos)
+
     return (
         <div>Videos</div>
     )

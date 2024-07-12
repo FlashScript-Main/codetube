@@ -1,17 +1,12 @@
-import React from "react";
 import { categories } from "../constants"
+import { SidebarType } from "../types";
 
 // const selectedCategory = "VS Code";
 
-type SidebarType = {
-    selectedCategory: string;
-    setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
-}
-
 const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
 
-
     console.log(selectedCategory)
+
     return (
         <div className="flex overflow-y-auto h-auto md:h-[95%] md:flex-col">
             {categories.map((item) => (

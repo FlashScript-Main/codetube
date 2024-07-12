@@ -1,7 +1,14 @@
+import React from "react";
+
 export type CategoriesType = {
     id: number;
     name: string;
     icon: string;
+}
+
+export type SidebarType = {
+    selectedCategory: string;
+    setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export type setThisDataType = {
@@ -24,6 +31,9 @@ export type setThisDataType = {
     }
 }
 
+export type VideosType = {
+    videos: setThisDataType[] | null
+}
 
 /*
 {
