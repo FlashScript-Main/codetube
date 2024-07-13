@@ -54,4 +54,8 @@ export {
     codetubeLightLogo,
 }
 
-export const searchLink: string = "search?part=snippet&q=";
+export const searchLink: string = "search?part=snippet&q=learn%20";
+
+export const channelLink: string = "channels?part=snippet&id=";
+
+export const searchChannelLink: string = "search?part=snippet&order=date&channelId=";

@@ -33,7 +33,42 @@ export type setThisDataType = {
         };
         channelTitle: string
     }
+    statistics: {
+        viewCount: string;
+        subscriberCount: string;
+        videoCount: string
+    }
 }
+
+// export type setThisChannelDataType = {
+//     // id?: string;
+//     id?: string | {
+//         videoId?: string;
+//         channelId?: string;
+//     }
+//     snippet?: {
+//         channelId?: string;
+//         title: string;
+//         description?: string;
+//         thumbnails: {
+//             default: {
+//                 url: string;
+//             },
+//             medium?: {
+//                 url: string;
+//             },
+//             high?: {
+//                 url: string;
+//             }
+//         };
+//         channelTitle: string
+//     }
+//     statistics: {
+//         viewCount: string;
+//         subscriberCount: string;
+//         videoCount: string
+//     }
+// }
 
 export type VideosType = {
     videos: setThisDataType[] | null

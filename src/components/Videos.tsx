@@ -1,5 +1,5 @@
 import { VideosType } from '../types/index';
-import { VideoCard } from './';
+import { VideoCard, ChannelCard } from './';
 
 const Videos = ({ videos }: VideosType) => {
 
@@ -9,7 +9,7 @@ const Videos = ({ videos }: VideosType) => {
                 <div key={index}>
                     {item.id?.videoId && <VideoCard video={item} />}
 
-                    {/* {item.id?.channelId && <ChannelCard channelDetail={item} />} */}
+                    {item.id?.channelId && <ChannelCard channelDetail={item} />}
                 </div>
             ))}
         </div>
