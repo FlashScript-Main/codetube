@@ -12,7 +12,11 @@ export type SidebarType = {
 }
 
 export type setThisDataType = {
-    snippet: {
+    id?: {
+        videoId?: string;
+        channelId?: string;
+    }
+    snippet?: {
         channelId?: string;
         title: string;
         description?: string;

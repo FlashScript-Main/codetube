@@ -1,13 +1,18 @@
 import { VideosType } from '../types/index';
-
-
+import { VideoCard } from './';
 
 const Videos = ({ videos }: VideosType) => {
 
-    console.log(videos)
-
     return (
-        <div>Videos</div>
+        <div className='flex flex-wrap justify-start gap-4'>
+            {videos?.map((item, index) => (
+                <div key={index}>
+                    {item.id?.videoId && <VideoCard video={item} />}
+
+                    {/* {item.id?.channelId && <ChannelCard channelDetail={item} />} */}
+                </div>
+            ))}
+        </div>
     )
 
 }
