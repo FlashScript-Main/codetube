@@ -5,8 +5,6 @@ import { BadgeCheck } from "lucide-react"
 
 const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType | null, marginTop?: string}) => {
 
-    console.log(channelDetail)
-
     return (
         <div className={`rounded-[20px] flex justify-center w-[356px] md:w-[320px] h-[326px] ${marginTop && `-mt-[110px]`} mx-auto`}>
             <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -27,7 +25,7 @@ const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType
                         </span>
                     </div>
 
-                    {channelDetail?.statistics.subscriberCount && (
+                    {channelDetail?.statistics?.subscriberCount && (
                         <p className="text-slate-500">
                             {parseInt(channelDetail.statistics.subscriberCount).toLocaleString()}
                             {" "} Subscribers

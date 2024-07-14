@@ -8,6 +8,7 @@ import Sidebar from "./Sidebar";
 import Videos from "./Videos";
 import ChannelCard from "./ChannelCard";
 import VideoCard from "./VideoCard";
+import MainChannelCard from "./MainChannelCard";
 import NotFound from "./NotFound";
 
 export {
@@ -21,5 +22,6 @@ export {
     Videos,
     VideoCard,
     ChannelCard,
+    MainChannelCard,
     NotFound
 }

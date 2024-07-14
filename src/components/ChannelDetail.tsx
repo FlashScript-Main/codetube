@@ -4,7 +4,7 @@ import { useState } from "react";
 import useYouTubeChannel from "../api/useYouTubeChannel";
 import { setThisDataType } from "../types";
 import useYouTube from "../api/useYouTube";
-import { Videos, ChannelCard } from "./";
+import { Videos, MainChannelCard } from "./";
 
 const ChannelDetail = () => {
 
@@ -23,7 +23,7 @@ const ChannelDetail = () => {
             <div>
                 <div className="h-[300px] z-10 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%" />
 
-                <ChannelCard
+                <MainChannelCard
                     channelDetail={channelDetail} 
                     marginTop="-110"
                 />
