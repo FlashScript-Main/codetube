@@ -36,7 +36,8 @@ export type setThisDataType = {
     statistics: {
         viewCount: string;
         subscriberCount: string;
-        videoCount: string
+        videoCount: string;
+        likeCount: string;
     }
 }
 
@@ -71,7 +72,8 @@ export type setThisDataType = {
 // }
 
 export type VideosType = {
-    videos: setThisDataType[] | null
+    videos: setThisDataType[] | null,
+    direction?: string;
 }
 
 /*
