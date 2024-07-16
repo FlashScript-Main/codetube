@@ -25,8 +25,6 @@ export default {
         'main-text-h1-light': '#0f172a',
         'main-text-h1-dark': '#ffffff',
         'main-title': 'rgba(56,189,248,1)',
-        
-        // border
       },
     },
   },

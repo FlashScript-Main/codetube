@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import About from "./About";
 import Feed from "./Feed";
 import VideoDetail from "./VideoDetail";
 import ChannelDetail from "./ChannelDetail";
@@ -13,6 +14,7 @@ import NotFound from "./NotFound";
 
 export {
     Navbar,
+    About,
     Feed,
     VideoDetail,
     ChannelDetail,

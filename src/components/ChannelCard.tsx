@@ -15,7 +15,7 @@ const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType
                         className={`rounded-full w-48 mb-4 border-4 ${marginTop ? "border-indigo-600" : "border-main-title"} hover:border-indigo-500 mx-auto`}
                     />
 
-                    <div className="flex justify-start items-center px-2 group">
+                    <div className="flex justify-start items-center px-2 group mx-auto">
                         <h5 className={`font-bold ${marginTop ? "text-indigo-200 text-lg md:text-xl" : "text-indigo-400 text-base"}  group-hover:text-blue-500 text-center`}>
                             {channelDetail?.snippet?.title}
                         </h5>
