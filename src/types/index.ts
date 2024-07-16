@@ -13,6 +13,7 @@ export type SidebarType = {
 
 export type setThisDataType = {
     id?: {
+        kind: string;
         videoId?: string;
         channelId?: string;
     }

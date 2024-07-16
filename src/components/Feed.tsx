@@ -24,10 +24,10 @@ const Feed = () => {
 
 
             <section className="p-4 overflow-y-auto h-[90vh] flex-1">
-                <h1 className="text-4xl font-bold mb-4 text-white">
+                <h1 className="text-4xl font-bold mb-6 md:8 text-main-title text-center md:text-left">
                     {selectedCategory} {" "}
-                    <span className="text-[#FC1503]">
-                        vidoes
+                    <span className="text-white">
+                        Vidoes
                     </span>
                 </h1>
 
