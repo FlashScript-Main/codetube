@@ -8,28 +8,33 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
     console.log(selectedCategory)
 
     return (
-        <div className="flex overflow-y-auto h-auto md:h-[95%] md:flex-col">
+        <div className="flex overflow-y-auto h-auto md:h-[95%] md:flex-col gap-4">
             {categories.map((item) => (
                 <button
                     key={item.id} 
-                    className=" opacity-50 hover:opacity-100 transition-colors flex justify-between items-center category-btn" 
+                    className={`flex justify-center items-center font-bold py-2 px-2 rounded-3xl border border-transparent hover:border hover:border-blue-500 ${item.name === selectedCategory && "bg-blue-200 text-blue-900"}`}
                     onClick={() => setSelectedCategory(item.name)}
-                    style={{
-                        background: item.name === selectedCategory ? "#FC1503" : "",
-                        opacity: item.name === selectedCategory ? "1" : ""
-                    }}
+                    
                 >
-                  
+                  <div className="flex justify-center md:justify-start items-center w-32 md:w-36">
+
                     <img 
-                        className="w-8 mr-4"
+                        className="w-8 mr-2 md:mr-4"
                         src={item.icon} 
                         alt={item.name} 
                         
-                    />
+                        />
                     
-                    <span>{item.name}</span>
+                    <span className="text-sm">
+                        {item.name}
+                    </span>
+                        </div>
                 </button>
             ))}
+
+            <h5 className="copyright mt-6 text-white">
+                Copyright 2024 FlashScript
+            </h5>
         </div>
     )
 

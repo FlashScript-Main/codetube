@@ -19,21 +19,21 @@ const SearchBar = () => {
     }
 
     return (
-        <form onSubmit={() => {}} className="rounded-3xl border-[#e3e3e3] pl-4 shadow-none mr-4 bg-white flex items-center justify-center">
+        <div className="rounded-3xl border-[3px] border-sky-400 pl-4 mr-4 bg-white flex items-center justify-center">
             <input 
-                className="search-bar text-black" 
+                className="border-none outline-none w-14 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black" 
                 placeholder="Search..." 
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             <button 
-                className="p-3 text-red-500"
+                className="p-3 text-blue-700"
                 onClick={handleSubmit}
             >   
                 <Search />
             </button>
-        </form>
+        </div>
     )
 
 }

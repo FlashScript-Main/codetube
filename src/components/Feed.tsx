@@ -20,11 +20,8 @@ const Feed = () => {
                     selectedCategory={selectedCategory} 
                     setSelectedCategory={setSelectedCategory}
                 />
-
-                <h5 className="copyright mt-6 text-white">
-                    Copyright 2024 FlashScript
-                </h5>
             </aside>
+
 
             <section className="p-4 overflow-y-auto h-[90vh] flex-1">
                 <h1 className="text-4xl font-bold mb-4 text-white">

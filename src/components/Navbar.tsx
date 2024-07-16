@@ -6,9 +6,13 @@ import SearchBar from "./SearchBar"
 const Navbar = () => {
 
     return (
-        <nav className="flex justify-between items-center p-4 sticky bg-black top-0">
-            <Link to="/" className="flex items-center">
-                <img src={codetubeDarkLogo} alt="CodeTube" className="h-12 md:h-16 lg:h-20 xl:h-24 2xl:h-28" />
+        <nav className="flex justify-between items-center px-8 py-4 sticky bg-body-bg-dark top-0 left-0 z-20 border-b border-b-blue-400 rounded-r-full rounded-l-full shadow-md shadow-blue-500/50 mb-4">
+            <Link to="/">
+                <img 
+                    src={codetubeDarkLogo} 
+                    alt="CodeTube" 
+                    className="h-16 md:h-20 lg:h-24 xl:h-28 2xl:h-32" 
+                />
             </Link>
 
             <SearchBar />
