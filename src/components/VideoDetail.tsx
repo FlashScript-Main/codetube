@@ -37,26 +37,26 @@ const VideoDetail = () => {
                             {videoDetail?.snippet?.title}
                         </h5>
 
-                        <div className="py-2 mx-4 md:mx-6 flex flex-col md:flex-row justify-between text-white border-b">
+                        <div className="py-2 mx-4 md:mx-6 flex flex-col md:flex-row justify-between text-white border-b border-blue-400 pb-3 mb-4">
                             <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
                                 <div className="flex justify-start items-center group">
-                                    <h5 className="text-base font-bold text-indigo-400 group-hover:text-blue-500">
+                                    <h5 className="text-base md:text-lg font-bold text-indigo-400 group-hover:text-blue-500">
                                         {videoDetail?.snippet?.channelTitle}
                                     </h5>
 
                                     <span>
-                                        <BadgeCheck className="ml-1 w-4 text-indigo-300 group-hover:text-blue-500" />
+                                        <BadgeCheck className="ml-1 w-4 md:w-5 text-indigo-300 group-hover:text-blue-500" />
                                     </span>
                                 </div>
                             </Link>
 
-                            <div className="flex gap-5 items-center justify-end md:justify-normal">
-                                <p className="text-sm opacity-70">
-                                    {videoDetail?.statistics?.viewCount && parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} views
+                            <div className="flex gap-5 items-center justify-end md:justify-normal mt-2 md:mt-0">
+                                <p className="text-sm md:text-base opacity-70">
+                                    {videoDetail?.statistics?.viewCount && parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} Views
                                 </p>
                                 
-                                <p className="text-sm opacity-70">
-                                    {videoDetail?.statistics?.likeCount && parseInt(videoDetail?.statistics?.likeCount).toLocaleString()} likes
+                                <p className="text-sm md:text-base opacity-70">
+                                    {videoDetail?.statistics?.likeCount && parseInt(videoDetail?.statistics?.likeCount).toLocaleString()} Likes
                                 </p>
                             </div>
                         </div>

@@ -28,7 +28,7 @@ const SearchBar = () => {
             />
 
             <button 
-                className="p-3 text-blue-700"
+                className="p-3 text-blue-700 hover:text-main-title"
                 onClick={handleSubmit}
             >   
                 <Search />
