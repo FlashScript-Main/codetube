@@ -27,7 +27,7 @@ const Feed = () => {
                 <h1 className="text-4xl font-bold mb-6 md:8 text-main-title text-center md:text-left">
                     {selectedCategory} {" "}
                     <span className="text-white">
-                        Vidoes
+                        Videos
                     </span>
                 </h1>
 

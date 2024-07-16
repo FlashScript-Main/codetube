@@ -17,13 +17,13 @@ const SearchFeed = () => {
     const { isLoading } = useYouTube(`${searchUserLink}${searchTerm}`, setMainData)
 
     return (
-        <main className="p-4 overflow-y-auto h-[90vh] flex-1">
-            <h1 className="text-4xl font-bold mb-4 text-white">
-                Search Result for: {" "} 
-                <span className="text-[#FC1503]">
+        <main className="p-4 md:p-8 overflow-y-auto h-[90vh] flex-1">
+            <h1 className="text-4xl font-bold mb-6 md:8 text-white text-center md:text-left">
+                Search Result for {" "} 
+                <span className="text-main-title">
                     {searchTerm} 
                 </span>
-                {" "} vidoes
+                {" "} Videos
             </h1>
 
             {!isLoading && <Videos videos={mainData} />}
