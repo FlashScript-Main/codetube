@@ -74,7 +74,6 @@ export type setThisDataType = {
 
 export type VideosType = {
     videos: setThisDataType[] | null,
-    direction?: string;
 }
 
 /*

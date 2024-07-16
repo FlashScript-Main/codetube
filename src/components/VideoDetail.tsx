@@ -12,7 +12,6 @@ const VideoDetail = () => {
 
     const { id } = useParams();
 
-    // const [mainData, setMainData] = useState<setThisDataType[] | null>(null)
     const [videoDetail, setVideoDetail] = useState<setThisDataType | null>(null)
     const [videos, setVideos] = useState<setThisDataType[] | null>([])
     
@@ -22,10 +21,9 @@ const VideoDetail = () => {
     console.log(videoDetail)
     return (
         <main className="min-h-[95vh]">
-            <div className="flex flex-col md:flex-row">
-
-                <div className="flex flex-1">
-                    <div className="w-full sticky top-[86px]">
+            <div className="flex flex-col">
+                <div className="flex">
+                    <div className="w-full">
                         {
                             isVideoDetailLoading ? 'Loading...' : 
                             <ReactPlayer 
@@ -35,22 +33,24 @@ const VideoDetail = () => {
                             />
                         }
 
-                        <h5 className="text-white text-base font-bold p-4">
+                        <h5 className="py-2 md:py-4 px-4 md:px-6 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-indigo-200">
                             {videoDetail?.snippet?.title}
                         </h5>
 
-                        <div className="flex justify-between text-white py-2 px-4">
+                        <div className="py-2 mx-4 md:mx-6 flex flex-col md:flex-row justify-between text-white border-b">
                             <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
-                                <p className="flex text-sm md:text-base text-white">
-                                    {videoDetail?.snippet?.channelTitle}
+                                <div className="flex justify-start items-center group">
+                                    <h5 className="text-base font-bold text-indigo-400 group-hover:text-blue-500">
+                                        {videoDetail?.snippet?.channelTitle}
+                                    </h5>
 
                                     <span>
-                                        <BadgeCheck className="text-gray-300 ml-1 w-5" />
+                                        <BadgeCheck className="ml-1 w-4 text-indigo-300 group-hover:text-blue-500" />
                                     </span>
-                                </p>
+                                </div>
                             </Link>
 
-                            <div className="flex gap-5 items-center">
+                            <div className="flex gap-5 items-center justify-end md:justify-normal">
                                 <p className="text-sm opacity-70">
                                     {videoDetail?.statistics?.viewCount && parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} views
                                 </p>
@@ -60,17 +60,16 @@ const VideoDetail = () => {
                                 </p>
                             </div>
                         </div>
-                        
-                        <div className="px-4 py-10 md:py-2 flex justify-center items-center">
-                            {
-                                !isVideosLoading && 
-                                <Videos 
-                                    videos={videos}
-                                    direction="column" 
-                                />
-                            }
-                        </div>
                     </div>
+                </div>
+
+                <div className="px-4 py-10 md:py-2 flex justify-center items-center">
+                    {
+                        !isVideosLoading && 
+                        <Videos 
+                            videos={videos}
+                        />
+                    }
                 </div>
             </div>
         </main>
