@@ -33,7 +33,10 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
             ))}
 
             <h5 className="copyright mt-6 text-white">
-                Copyright 2024 FlashScript
+                Copyright 2024 {" "}
+                <a href="https://github.com/FlashScript-Main/youtube_clone_first" className="text-main-title hover:underline">
+                    FlashScript
+                </a>
             </h5>
         </div>
     )
