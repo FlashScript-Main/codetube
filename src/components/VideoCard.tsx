@@ -29,7 +29,7 @@ const VideoCard = ({video}: {video: setThisDataType}) => {
                     </h5>
 
                     <span>
-                        <BadgeCheck className="ml-1 w-4 text-indigo-300 group-hover:text-blue-500" />
+                        <BadgeCheck className="ml-1 w-4 text-indigo-300 group-hover:text-blue-500 duration-0" />
                     </span>
                 </div>
             </Link>

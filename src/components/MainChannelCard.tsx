@@ -19,7 +19,7 @@ const MainChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisData
                     </h5>
 
                     <span>
-                        <BadgeCheck className="text-gray-300 ml-1 w-5" />
+                        <BadgeCheck className="text-gray-300 ml-1 w-5 duration-0" />
                     </span>
                 </div>
 
