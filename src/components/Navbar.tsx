@@ -21,7 +21,7 @@ const Navbar = () => {
                 />
             </Link>
 
-            <div className={`flex gap-4 lg:gap-8 ${language === "FA" ? "mr-auto ml-4 md:ml-8 lg:ml-10" : "ml-auto mr-4 md:mr-8 lg:mr-10"}`}>
+            <div className={`flex gap-2 md:gap-4 lg:gap-8 ${language === "FA" ? "mr-auto ml-4 md:ml-8 lg:ml-10" : "ml-auto mr-4 md:mr-8 lg:mr-10"}`}>
                 <ModeToggle />
                 <LanguageToggle />
             </div>

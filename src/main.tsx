@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
         <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
-          <LanguageProvider defaultTheme='EN' storageKey='vite-ui-language'>
+          <LanguageProvider defaultLanguage='EN' storageKey='vite-ui-language'>
             <App />
           </LanguageProvider>
         </ThemeProvider>

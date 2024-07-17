@@ -20,6 +20,9 @@ module.exports = {
       fontFamily: {
         'inter': ['"Inter var", sans-serif'],
       },
+      screens: {
+        xs: {'max': '375px'},
+      },
       colors: {
         // body
         'body-bg-dark': '#0f172a',

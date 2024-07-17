@@ -4,7 +4,7 @@ type Language = "EN" | "FA"
 
 type LanguageProviderProps = {
   children: React.ReactNode
-  defaultTheme?: Language
+  defaultLanguage?: Language
   storageKey?: string
 }
 
@@ -22,12 +22,12 @@ const LanguageProviderContext = createContext<LanguageProviderState>(initialStat
 
 export function LanguageProvider({
   children,
-  defaultTheme = "EN",
+  defaultLanguage = "EN",
   storageKey = "vite-ui-language",
   ...props
 }: LanguageProviderProps) {
   const [language, setlanguage] = useState<Language>(
-    () => (localStorage.getItem(storageKey) as Language) || defaultTheme
+    () => (localStorage.getItem(storageKey) as Language) || defaultLanguage
   )
 
   useEffect(() => {

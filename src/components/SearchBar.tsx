@@ -22,16 +22,16 @@ const SearchBar = () => {
     }
 
     return (
-        <div className={`rounded-3xl border-[3px] border-rose-600 dark:border-sky-400 pl-4 mr-4 bg-white flex items-center justify-center ${language === "FA" ? "order-first" : ""}`}>
+        <div className={`rounded-3xl border-[3px] border-rose-600 dark:border-sky-400 mr-4 bg-white flex items-center justify-center ${language === "FA" ? "order-first pr-4" : "pl-4"}`}>
             <input 
-                className="border-none outline-none w-14 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black" 
-                placeholder="Search..." 
+                className={`border-none outline-none w-14 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black ${language === "FA" && "text-end"}`} 
+                placeholder={language === "FA" ? "...جستجو" : "Search..." }
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
 
             <button 
-                className="p-3 text-pink-500 dark:text-blue-700 hover:text-pink-800 dark:hover:text-main-title"
+                className={`p-3 text-pink-500 dark:text-blue-700 hover:text-pink-800 dark:hover:text-main-title ${language === "FA" && "order-first"}`}
                 onClick={handleSubmit}
             >   
                 <Search />

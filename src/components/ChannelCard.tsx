@@ -2,8 +2,11 @@ import { Link } from "react-router-dom"
 import { setThisDataType } from "../types"
 import { demoProfilePicture } from "../constants"
 import { BadgeCheck } from "lucide-react"
+import { useLanguage } from "@/language/language-provider"
 
 const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType | null, marginTop?: boolean}) => {
+
+    const { language } = useLanguage();
 
     return (
         <div className={`grid place-content-center h-full w-full ${marginTop && `-mt-24 mb-8`}`}>
@@ -26,9 +29,13 @@ const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType
                     </div>
 
                     {channelDetail?.statistics?.subscriberCount && (
-                        <p className="text-orange-700 dark:text-blue-300">
-                            {parseInt(channelDetail.statistics.subscriberCount).toLocaleString()}
-                            {" "} Subscribers
+                        <p className="text-orange-700 dark:text-blue-300 flex gap-1 mx-auto">
+                            <span>
+                                {parseInt(channelDetail.statistics.subscriberCount).toLocaleString()}
+                            </span>
+                            <span className={`${language === "FA" && "order-first"}`}>
+                                {language === "FA" ? "مشترک" : "Subscribers"}
+                            </span>
                         </p>
                     )}
                 </div>

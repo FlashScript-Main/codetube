@@ -7,6 +7,7 @@ import useYouTubeChannel from "../api/useYouTubeChannel";
 import { BadgeCheck } from "lucide-react";
 import useYouTube from "../api/useYouTube";
 import Videos from "./Videos";
+import { useLanguage } from "@/language/language-provider";
 
 const VideoDetail = () => {
 
@@ -18,7 +19,10 @@ const VideoDetail = () => {
     const { isLoading: isVideoDetailLoading } = useYouTubeChannel(`${videoLink}${id}`, setVideoDetail)
     const { isLoading: isVideosLoading } = useYouTube(`${searchVideoLink}${id}`, setVideos)
 
-    console.log(videoDetail)
+    // console.log(videoDetail)
+
+    const { language } = useLanguage();
+
     return (
         <main className="min-h-[95vh]">
             <div className="flex flex-col">
@@ -51,12 +55,22 @@ const VideoDetail = () => {
                             </Link>
 
                             <div className="flex gap-5 items-center justify-end md:justify-normal mt-2 md:mt-0">
-                                <p className="text-sm md:text-base opacity-70">
-                                    {videoDetail?.statistics?.viewCount && parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} Views
+                                <p className="text-sm md:text-base opacity-70 flex gap-1">
+                                    <span>
+                                        {videoDetail?.statistics?.viewCount && parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} 
+                                    </span>
+                                    <span className={`${language === "FA" && "order-first"}`}>
+                                        {language === "FA" ? "بازدید" : "Views"}
+                                    </span>
                                 </p>
                                 
-                                <p className="text-sm md:text-base opacity-70">
-                                    {videoDetail?.statistics?.likeCount && parseInt(videoDetail?.statistics?.likeCount).toLocaleString()} Likes
+                                <p className="text-sm md:text-base opacity-70 flex gap-1">
+                                    <span>
+                                        {videoDetail?.statistics?.likeCount && parseInt(videoDetail?.statistics?.likeCount).toLocaleString()}
+                                    </span>
+                                    <span className={`${language === "FA" && "order-first"}`}>
+                                        {language === "FA" ? "پسندیده" : "Likes"}
+                                    </span>
                                 </p>
                             </div>
                         </div>
