@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import SearchBar from "./SearchBar"
 import { ModeToggle } from "@/theme/mode-toggle"
 import { useTheme } from "@/theme/theme-provider"
+import { LanguageToggle } from "@/language/language-toggle"
 
 const Navbar = () => {
 
@@ -18,8 +19,9 @@ const Navbar = () => {
                 />
             </Link>
 
-            <div className="grid ml-auto mr-4 md:mr-8 lg:mr-10">
+            <div className="flex gap-4 lg:gap-8 ml-auto mr-4 md:mr-8 lg:mr-10">
                 <ModeToggle />
+                <LanguageToggle />
             </div>
             
             <SearchBar />
