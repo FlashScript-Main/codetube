@@ -23,7 +23,7 @@ module.exports = {
       colors: {
         // body
         'body-bg-dark': '#0f172a',
-        'body-bg-light': '#f2f3fa',
+        'body-bg-light': '#f1f5f9',
 
         // card
         'nav-card-bg-dark': '#173a55',
