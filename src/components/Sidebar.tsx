@@ -1,11 +1,13 @@
-import { categories } from "../constants"
+import useCategories from "../constants/useCategories"
 import { SidebarType } from "../types";
 
 // const selectedCategory = "VS Code";
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
 
-    console.log(selectedCategory)
+    // console.log(selectedCategory)
+
+    const categories = useCategories();
 
     return (
         <div className="flex overflow-y-auto h-auto md:h-[95%] md:flex-col gap-4">

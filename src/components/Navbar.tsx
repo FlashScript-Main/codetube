@@ -21,6 +21,7 @@ const Navbar = () => {
             <div className="grid ml-auto mr-4 md:mr-8 lg:mr-10">
                 <ModeToggle />
             </div>
+            
             <SearchBar />
         </nav>
     )

@@ -19,7 +19,7 @@ const SearchBar = () => {
     }
 
     return (
-        <div className="rounded-3xl border-[3px] border-sky-400 pl-4 mr-4 bg-white flex items-center justify-center">
+        <div className="rounded-3xl border-[3px] border-rose-600 dark:border-sky-400 pl-4 mr-4 bg-white flex items-center justify-center">
             <input 
                 className="border-none outline-none w-14 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black" 
                 placeholder="Search..." 
@@ -28,7 +28,7 @@ const SearchBar = () => {
             />
 
             <button 
-                className="p-3 text-blue-700 hover:text-main-title"
+                className="p-3 text-pink-500 dark:text-blue-700 hover:text-pink-800 dark:hover:text-main-title"
                 onClick={handleSubmit}
             >   
                 <Search />
