@@ -15,7 +15,7 @@ const Feed = () => {
     // mainData && isFetched && console.log(mainData)
     return (
         <main className="flex flex-col md:flex-row">
-            <aside className="h-auto md:h-[92vh] border-r border-r-[#3d3d3d] px-0 md:px-8">
+            <aside className="h-auto md:h-[92vh] border-r border-r-amber-500 dark:border-r-[#3d3d3d] px-0 md:px-8">
                 <Sidebar 
                     selectedCategory={selectedCategory} 
                     setSelectedCategory={setSelectedCategory}
@@ -24,9 +24,9 @@ const Feed = () => {
 
 
             <section className="p-4 overflow-y-auto h-[90vh] flex-1">
-                <h1 className="text-4xl font-bold mb-6 md:8 text-main-title text-center md:text-left">
+                <h1 className="text-4xl font-bold mb-6 md:8 text-rose-500 dark:text-main-title text-center md:text-left">
                     {selectedCategory} {" "}
-                    <span className="text-white">
+                    <span className="text-main-text-h1-light dark:text-white">
                         Videos
                     </span>
                 </h1>

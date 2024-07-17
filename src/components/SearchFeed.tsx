@@ -18,9 +18,9 @@ const SearchFeed = () => {
 
     return (
         <main className="p-4 md:p-8 overflow-y-auto h-[90vh] flex-1">
-            <h1 className="text-4xl font-bold mb-6 md:8 text-white text-center md:text-left">
+            <h1 className="text-4xl font-bold mb-6 md:8 text-main-text-h1-light dark:text-white text-center md:text-left">
                 Search Result for {" "} 
-                <span className="text-main-title">
+                <span className="text-rose-500 dark:text-main-title">
                     {searchTerm} 
                 </span>
                 {" "} Videos

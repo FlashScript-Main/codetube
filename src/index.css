@@ -99,7 +99,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-indigo-300 rounded-full h-20;
+  @apply dark:bg-indigo-300 bg-rose-400 rounded-full h-20;
   /* border-radius: 10px; */
   /* height: 200px; */
 }

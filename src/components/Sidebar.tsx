@@ -14,7 +14,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
             {categories.map((item) => (
                 <button
                     key={item.id} 
-                    className={`flex justify-center items-center font-bold py-2 px-2 rounded-3xl border border-transparent hover:border hover:border-blue-500 ${item.name === selectedCategory && "bg-blue-200 text-blue-900"}`}
+                    className={`flex justify-center items-center font-bold py-2 px-2 rounded-3xl border border-transparent hover:border hover:border-orange-600 dark:hover:border-blue-500 ${item.name === selectedCategory && "bg-yellow-400 dark:bg-blue-200 text-rose-700 dark:text-blue-900"}`}
                     onClick={() => setSelectedCategory(item.name)}
                     
                 >
@@ -34,9 +34,9 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
                 </button>
             ))}
 
-            <h5 className="copyright mt-6 text-white">
+            <h5 className="copyright mt-6 text-main-text-h1-light dark:text-white">
                 Copyright 2024 {" "}
-                <a href="https://github.com/FlashScript-Main/youtube_clone_first" className="text-main-title hover:underline">
+                <a href="https://github.com/FlashScript-Main/youtube_clone_first" className="text-rose-600 dark:text-main-title hover:underline">
                     FlashScript
                 </a>
             </h5>

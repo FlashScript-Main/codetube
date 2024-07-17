@@ -17,19 +17,19 @@ const VideoCard = ({video}: {video: setThisDataType}) => {
             </Link>
 
             <Link to={video.id?.videoId ? `/video/${video.id.videoId}` : demoVideoUrl}>
-                <h3 className="text-lg font-medium text-white px-2 hover:text-main-title">
+                <h3 className="text-lg font-medium text-main-text-h1-light dark:text-white px-2 hover:text-red-500 dark:hover:text-main-title">
                     {video.snippet?.title.slice(0, 60) || demoVideoTitle.slice(0, 60)}
                 </h3>
             </Link>
 
             <Link to={video.snippet?.channelId ? `/channel/${video.snippet.channelId}` : demoChannelUrl}>
                 <div className="flex justify-start items-center px-2 group">
-                    <h5 className="text-base font-bold text-indigo-400 group-hover:text-blue-500">
+                    <h5 className="text-base font-bold text-orange-500 dark:text-indigo-400 group-hover:text-red-800 dark:group-hover:text-blue-500">
                         {video.snippet?.channelTitle || demoChannelTitle}
                     </h5>
 
                     <span>
-                        <BadgeCheck className="ml-1 w-4 text-indigo-300 group-hover:text-blue-500 duration-0" />
+                        <BadgeCheck className="ml-1 w-4 text-orange-500 dark:text-indigo-300 group-hover:text-red-800 dark:group-hover:text-blue-500 duration-0" />
                     </span>
                 </div>
             </Link>

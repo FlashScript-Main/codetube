@@ -21,7 +21,7 @@ const ChannelDetail = () => {
     return (
         <main>
             <div>
-                <div className="h-[300px] z-10 bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%" />
+                <div className="h-[300px] z-10 bg-gradient-to-r from-yellow-400 dark:from-indigo-500 from-10% via-orange-500 dark:via-sky-500 via-30% to-rose-600 dark:to-emerald-500 to-90%" />
 
                 <ChannelCard
                     channelDetail={channelDetail} 
