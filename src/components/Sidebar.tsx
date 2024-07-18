@@ -26,8 +26,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
                         className="w-8 mr-2 md:mr-4"
                         src={item.icon} 
                         alt={item.name} 
-                        
-                        />
+                    />
                     
                     <span className="text-sm">
                         {item.name}

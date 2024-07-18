@@ -16,6 +16,7 @@ const ChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisDataType
                         src={channelDetail?.snippet?.thumbnails.high?.url || demoProfilePicture} 
                         alt={channelDetail?.snippet?.title} 
                         className={`rounded-full w-48 mb-4 border-4 ${marginTop ? "border-yellow-400 dark:border-indigo-600" : "border-rose-500 dark:border-main-title"} hover:border-rose-700 dark:hover:border-indigo-500 mx-auto`}
+                        loading="lazy"
                     />
 
                     <div className="flex justify-start items-center px-2 group mx-auto">

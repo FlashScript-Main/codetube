@@ -13,6 +13,7 @@ const VideoCard = ({video}: {video: setThisDataType}) => {
                     src={video.snippet?.thumbnails.high?.url || demoProfilePicture} 
                     alt={video.snippet?.title}
                     className="w-full aspect-video object-cover group-hover:scale-105 transition-all"
+                    loading="lazy"
                 />
             </Link>
 
