@@ -3,7 +3,8 @@ import { VideoCard, ChannelCard } from './';
 
 const Videos = ({ videos }: VideosType ) => {
 
-    console.log(videos)
+    // console.log(videos)
+    
     return (
         <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-12 md:gap-x-4 mb-8`}>
             {videos?.map((item, index) => (

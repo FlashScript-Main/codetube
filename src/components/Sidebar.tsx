@@ -9,7 +9,7 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
     // console.log(selectedCategory)
 
     const categories = useCategories();
-    const {language} = useLanguage();
+    const { language } = useLanguage();
 
     return (
         <div className="flex overflow-y-auto h-auto md:h-[95%] md:flex-col gap-4">

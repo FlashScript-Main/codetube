@@ -4,6 +4,7 @@ import useYouTube from "../api/useYouTube";
 import { searchUserLink } from "../constants";
 import { setThisDataType } from "../types";
 import { useParams } from "react-router-dom";
+import { Loader } from "./Loader";
 
 const SearchFeed = () => {
 
@@ -26,7 +27,7 @@ const SearchFeed = () => {
                 {" "} Videos
             </h1>
 
-            {!isLoading && <Videos videos={mainData} />}
+            {isLoading ? <Loader /> : <Videos videos={mainData} />}
         </main>
     )
 

@@ -5,6 +5,7 @@ import useYouTube from "../api/useYouTube";
 import { searchLink } from "../constants";
 import { setThisDataType } from "../types";
 import { useLanguage } from "@/language/language-provider";
+import { Loader } from "./Loader";
 
 const Feed = () => {
 
@@ -34,7 +35,7 @@ const Feed = () => {
                     </span>
                 </h1>
 
-                {!isLoading && <Videos videos={mainData} />}
+                {isLoading ? <Loader /> : <Videos videos={mainData} />}
             </section>
         </main>
     )

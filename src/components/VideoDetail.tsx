@@ -8,6 +8,8 @@ import { BadgeCheck } from "lucide-react";
 import useYouTube from "../api/useYouTube";
 import Videos from "./Videos";
 import { useLanguage } from "@/language/language-provider";
+import { Loader } from "./Loader";
+// import Loader from "./Loader";
 
 const VideoDetail = () => {
 
@@ -16,8 +18,8 @@ const VideoDetail = () => {
     const [videoDetail, setVideoDetail] = useState<setThisDataType | null>(null)
     const [videos, setVideos] = useState<setThisDataType[] | null>([])
     
-    const { isLoading: isVideoDetailLoading } = useYouTubeChannel(`${videoLink}${id}`, setVideoDetail)
-    const { isLoading: isVideosLoading } = useYouTube(`${searchVideoLink}${id}`, setVideos)
+    useYouTubeChannel(`${videoLink}${id}`, setVideoDetail)
+    const { isLoading } = useYouTube(`${searchVideoLink}${id}`, setVideos)
 
     // console.log(videoDetail)
 
@@ -28,14 +30,14 @@ const VideoDetail = () => {
             <div className="flex flex-col">
                 <div className="flex">
                     <div className="w-full">
-                        {
-                            isVideoDetailLoading ? 'Loading...' : 
+                        
+                            
                             <ReactPlayer 
                                 url={`https://www.youtube.com/watch?v=${id}`} 
                                 className="react-player"
                                 controls
                             />
-                        }
+                        
 
                         <h5 className="py-2 md:py-4 px-4 md:px-6 text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-rose-700 dark:text-indigo-200">
                             {videoDetail?.snippet?.title}
@@ -79,7 +81,7 @@ const VideoDetail = () => {
 
                 <div className="px-4 py-10 md:py-2 flex justify-center items-center">
                     {
-                        !isVideosLoading && 
+                        isLoading ? <Loader /> : 
                         <Videos 
                             videos={videos}
                         />

@@ -2,8 +2,7 @@ import { Navbar } from "./components"
 import MainRoutes from "./routes/MainRoutes"
 
 const App = () => {
-    // 1️⃣ 👉🏻 img ➡ loading="lazy"
-    // 2️⃣ 👉🏻 spinner
+    // 1️⃣ 👉🏻 About.tsx
     // 3️⃣ 👉🏻 remove "useYouTubeChannel.tsx"
     // 4️⃣ 👉🏻 framer-motion
     // 5️⃣ 👉🏻 PWA

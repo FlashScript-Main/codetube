@@ -11,7 +11,6 @@ const MainChannelCard = ({channelDetail, marginTop}: {channelDetail: setThisData
                     src={channelDetail?.snippet?.thumbnails.high?.url || demoProfilePicture} 
                     alt={channelDetail?.snippet?.title} 
                     className="rounded-[50%] h-[180px] w-[180px] mb-4 border border-[#e3e3e3]"
-                    loading="lazy"
                 />
 
                 <div className="flex">
