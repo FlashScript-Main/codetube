@@ -6,6 +6,7 @@ import { setThisDataType } from "../types";
 import { useParams } from "react-router-dom";
 import { Loader } from "./Loader";
 import { motion } from 'framer-motion';
+import { useLanguage } from "@/language/language-provider";
 
 const SearchFeed = () => {
 
@@ -18,19 +19,25 @@ const SearchFeed = () => {
     
     const { isLoading } = useYouTube(`${searchUserLink}${searchTerm}`, setMainData)
 
+    const { language } = useLanguage();
+
     return (
         <main className="p-4 md:p-8 overflow-y-auto h-[90vh] flex-1">
             <motion.h1 
-                className="text-4xl font-bold mb-6 md:8 text-main-text-h1-light dark:text-white text-center md:text-left"
-                initial={{ x: "10%" }}
+                className={`flex gap-2 text-4xl font-bold mb-6 md:8 text-main-text-h1-light dark:text-white justify-center items-center ${language === "FA" ? "md:justify-end" : "md:justify-start"}`}
+                initial={language === "FA" ? { x: "-10%" } : { x: "10%" }}
                 animate={{ x: "0%" }}
                 transition={{ delay: 0.5, duration: 0.5 }}
-            >
-                Search Result for {" "} 
-                <span className="text-rose-500 dark:text-main-title">
+            >   
+                {language === "FA" ? "نتایج جستجو برای" : "Search Result for"}
+                
+                <span className={`${language === "FA" && "order-first"} text-rose-500 dark:text-main-title`}>
                     {searchTerm} 
                 </span>
-                {" "} Videos
+                
+                <span className={`${language === "FA" && "hidden"}`}>
+                    Videos
+                </span>
             </motion.h1>
 
             {isLoading ? <Loader /> : <Videos videos={mainData} />}
