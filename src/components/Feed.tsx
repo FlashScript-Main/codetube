@@ -6,6 +6,7 @@ import { searchLink } from "../constants";
 import { setThisDataType } from "../types";
 import { useLanguage } from "@/language/language-provider";
 import { Loader } from "./Loader";
+import { motion } from 'framer-motion';
 
 const Feed = () => {
 
@@ -28,12 +29,17 @@ const Feed = () => {
 
 
             <section className="p-4 overflow-y-auto h-[90vh] flex-1">
-                <h1 className={`text-4xl font-bold mb-6 md:mb-8 text-rose-500 dark:text-main-title text-center ${language === "FA" ? "md:text-end" : "md:text-left"}`}>
+                <motion.h1 
+                    className={`text-4xl font-bold mb-6 md:mb-8 text-rose-500 dark:text-main-title text-center ${language === "FA" ? "md:text-end" : "md:text-left"}`}
+                    initial={{ y: "-200%" }}
+                    animate={{ y: "0%" }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                >
                     {selectedCategory} {" "}
                     <span className="text-main-text-h1-light dark:text-white">
                         {language === "FA" ? "ویدیو های" : "Videos"}
                     </span>
-                </h1>
+                </motion.h1>
 
                 {isLoading ? <Loader /> : <Videos videos={mainData} />}
             </section>
