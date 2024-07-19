@@ -22,8 +22,6 @@ import reactLogo from '../assets/logo/reactjs.svg';
 import rapidAPILogo from '../assets/logo/rapid-api.ico';
 import reactqueryLogo from '../assets/logo/react-query.ico';
 import framermotionLogo from '../assets/logo/framer-motion.ico';
-import axiosLogo from '../assets/logo/axios.ico';
-import polypaneLogo from '../assets/logo/polypane.svg';
 import shadcnDarkLogo from '../assets/logo/shadcn-dark.png';
 import shadcnLightLogo from '../assets/logo/shadcn-light.png';
 
@@ -45,8 +43,6 @@ export {
     rapidAPILogo,
     reactqueryLogo,
     framermotionLogo,
-    axiosLogo,
-    polypaneLogo,
     shadcnDarkLogo,
     shadcnLightLogo
 }

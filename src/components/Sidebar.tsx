@@ -1,6 +1,7 @@
 import { useLanguage } from "@/language/language-provider";
 import useCategories from "../constants/useCategories"
 import { SidebarType } from "../types";
+import { Link } from "react-router-dom";
 
 // const selectedCategory = "VS Code";
 
@@ -39,9 +40,9 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
                 <span className={`${language === "FA" ? "order-last" : ""}`}>
                     {language === "FA" ? " حق نشر با": "Copyright 2024 "}
                 </span>
-                <a href="https://github.com/FlashScript-Main/youtube_clone_first" className="text-rose-600 dark:text-main-title hover:underline">
+                <Link to="/about" className="text-rose-600 dark:text-main-title hover:underline">
                     FlashScript
-                </a>
+                </Link>
             </h5>
         </div>
     )
