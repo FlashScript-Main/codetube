@@ -3,8 +3,6 @@ import MainRoutes from "./routes/MainRoutes"
 
 const App = () => {
     // 1️⃣ 👉🏻 About.tsx
-    // 3️⃣ 👉🏻 remove "useYouTubeChannel.tsx"
-    // 4️⃣ 👉🏻 Fix Search
     // 5️⃣ 👉🏻 PWA
     return (
         <div className={`bg-body-bg-light text-main-text-h1-light dark:bg-body-bg-dark dark:text-main-text-h1-dark`}>

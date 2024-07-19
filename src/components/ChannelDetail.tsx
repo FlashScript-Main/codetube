@@ -13,8 +13,8 @@ const ChannelDetail = () => {
     const [videos, setVideos] = useState<setThisDataType[] | null>([])
     const { id } = useParams();
 
-    const { isLoading: isChannelLoading, isFetched } = useYouTubeChannel(`${channelLink}${id}`, setChannelDetail)
     const { isLoading: isVideosLoading }= useYouTube(`${searchChannelLink}${id}`, setVideos)
+    const { isLoading: isChannelLoading, isFetched } = useYouTubeChannel(`${channelLink}${id}`, setChannelDetail)
 
     // {!isChannelLoading && console.log(channelDetail)}
     // {!isVideosLoading && console.log(videos)}
