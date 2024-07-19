@@ -25,6 +25,22 @@ import framermotionLogo from '../assets/logo/framer-motion.ico';
 import shadcnDarkLogo from '../assets/logo/shadcn-dark.png';
 import shadcnLightLogo from '../assets/logo/shadcn-light.png';
 
+
+
+export const searchLink: string = "search?part=snippet&q=learn%20";
+
+export const channelLink: string = "channels?part=snippet&id=";
+
+export const searchChannelLink: string = "search?part=snippet&order=date&channelId=";
+
+export const searchUserLink: string = "search?part=snippet&q=";
+
+export const videoLink: string = "videos?part=snippet,statistics&id=";
+
+export const searchVideoLink: string = "search?part=snippet&type=video&relatedToVideoId=";
+
+
+// 🔻 Exporting Logos HERE 👇🏻 🔻
 export {
     flashScriptLogo,
     vscodeLogo,
@@ -46,15 +62,3 @@ export {
     shadcnDarkLogo,
     shadcnLightLogo
 }
-
-export const searchLink: string = "search?part=snippet&q=learn%20";
-
-export const channelLink: string = "channels?part=snippet&id=";
-
-export const searchChannelLink: string = "search?part=snippet&order=date&channelId=";
-
-export const searchUserLink: string = "search?part=snippet&q=";
-
-export const videoLink: string = "videos?part=snippet,statistics&id=";
-
-export const searchVideoLink: string = "search?part=snippet&type=video&relatedToVideoId=";

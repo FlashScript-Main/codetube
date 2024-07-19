@@ -11,6 +11,16 @@ export type SidebarType = {
     setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
+export type aboutInfoType = {
+    id: number;
+    aTagClassName: string;
+    transitionDelay: number;
+    href: string;
+    imgSrc: string;
+    imgAlt: string;
+    imgClassName: string;
+}
+
 export type setThisDataType = {
     id?: {
         kind: string;
