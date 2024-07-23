@@ -21,7 +21,7 @@ const SearchFeed = () => {
     return (
         <main className="p-4 md:p-8 overflow-y-auto h-[90vh] flex-1">
             <motion.h1 
-                className={`flex gap-2 text-4xl font-bold mb-6 md:8 text-main-text-h1-light dark:text-white justify-center items-center ${language === "FA" ? "md:justify-end" : "md:justify-start"}`}
+                className={`flex flex-col md:flex-row gap-2 text-4xl font-bold mb-6 md:8 text-main-text-h1-light dark:text-white justify-center items-center ${language === "FA" ? "md:justify-end" : "md:justify-start"}`}
                 initial={language === "FA" ? { x: "-10%" } : { x: "10%" }}
                 animate={{ x: "0%" }}
                 transition={{ delay: 0.5, duration: 0.5 }}
