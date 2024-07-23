@@ -12,34 +12,34 @@
             body {
                 height: 100%;
                 margin: 0;
-                background: #0f172a;
+                background: #0a1f44;
                 display: flex;
                 align-items: center;
                 text-align: center;
                 justify-content: center;
             }
         
-            .title {
-                display: grid;
-                margin: 0 auto;
-                width: 70%;
+            .city {
+                align-items: center;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
                 padding: 40px 8%;
                 border-radius: 20px;
                 background: #fff;
-                margin-bottom: 1rem;
             }
 
-            .wifi {
-                width: 70%;
-                height: 70%;
-                border-radius: 55px;
+            .city-name {
+                font-size: 2em;
             }
         </style>
     </head>
     <body>
-        <div >
-            <h1 class="title">No Internet Connection</h1>
-            <img class="wifi" src="wifi.jpeg" alt="">
+        <div class="city">
+            <h2 class="city-name">
+                <span>Please go online to check the current weather.</span>
+            </h2>
         </div>
     </body>
 </html>
