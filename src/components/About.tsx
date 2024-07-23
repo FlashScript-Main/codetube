@@ -15,7 +15,7 @@ const About = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.75, ease: "easeOut"}}
         >   
-            <div className="overflow-hidden p-2 -mb-14">
+            <div className="overflow-hidden p-2 md:p-4 -mb-14">
                 <motion.h1 
                         className="text-2xl md:text-5xl lg:text-6xl xl:text-7xl text-rose-600 dark:text-main-title font-semibold text-center"
                         initial={{ y: "100%"}}

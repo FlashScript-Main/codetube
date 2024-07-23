@@ -10,9 +10,6 @@ import { useLanguage } from "@/language/language-provider";
 
 const SearchFeed = () => {
 
-    // const [userInput, setUserInput] = useState("")
-    // const [userInputRestul, setUserInputRestul] = useState(null)
-
     const [mainData, setMainData] = useState<setThisDataType[] | null>([])
 
     const { searchTerm } = useParams();

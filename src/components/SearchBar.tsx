@@ -27,7 +27,7 @@ const SearchBar = () => {
             onSubmit={handleSubmit}
         >
             <input 
-                className={`border-none outline-none w-14 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black ${language === "FA" && "text-end"}`} 
+                className={`border-none outline-none w-20 sm:w-24 md:w-40 lg:w-72 xl:w-96 2xl:w-[30rem] text-black ${language === "FA" && "text-end"}`} 
                 placeholder={language === "FA" ? "...جستجو" : "Search..." }
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}

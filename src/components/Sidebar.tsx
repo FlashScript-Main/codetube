@@ -24,18 +24,17 @@ const Sidebar = ({ selectedCategory, setSelectedCategory }: SidebarType) => {
                     animate={{ x: "0%" }}
                     transition={{ delay: Number(`0.5${item.id}`) , duration: 0.5 }}
                 >
-                  <div className="flex justify-center md:justify-start items-center w-32 md:w-36">
-
-                    <img 
-                        className="w-8 mr-2 md:mr-4"
-                        src={item.icon} 
-                        alt={item.name} 
-                    />
-                    
-                    <span className="text-sm">
-                        {item.name}
-                    </span>
-                        </div>
+                    <div className="flex justify-center md:justify-start items-center w-32 md:w-36">
+                        <img 
+                            className="w-8 mr-2 md:mr-4"
+                            src={item.icon} 
+                            alt={item.name} 
+                        />
+                        
+                        <span className="text-sm">
+                            {item.name}
+                        </span>
+                    </div>
                 </motion.button>
             ))}
 
