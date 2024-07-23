@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/codetube.svg" />
+    <link rel="icon" type="image/png" href="./logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="./manifest.json">
     <meta 
       name="description" 
       content="watch Code related videos on CodeTube. CodeTube is an online open-source website for watching the code videos for developers especially for front-end developers"
@@ -16,5 +17,41 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./serviceworker.js")
+            .then((reg) => console.log("Success: ", reg.scope))
+            .catch((err) => console.log("Failure: ", err))
+        })
+      }
+
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+        window.addEventListener('beforeinstallprompt', (e) => {
+          e.preventDefault();
+
+          const deferredPrompt = e;
+
+          const installButton = document.getElementById("installApp");
+
+          installButton.addEventListener("click", () => {
+            deferredPrompt.prompt();
+
+            deferredPrompt.userChoice.then(choiceResult => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('App installed');
+                    } else {
+                        console.log('App installation declined');
+                    }
+
+                    installButton.classList.add("cursor-not-allowed");
+                    installButton.classList.add("opacity-30");
+                    
+                    installButton.disabled = true;
+                });
+          })
+        });
+      }
+    </script>
   </body>
 </html>

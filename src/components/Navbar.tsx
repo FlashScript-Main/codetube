@@ -8,7 +8,6 @@ import { useLanguage } from "@/language/language-provider"
 import MobileMenu from "@/mobile/MobileMenu"
 import PWAToggle from "@/mobile/PWAToggle"
 import QRCodeLink from "@/mobile/QRCodeLink"
-// import { CircleChevronDown } from "lucide-react"
 
 const Navbar = () => {
 

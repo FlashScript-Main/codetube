@@ -26,7 +26,7 @@ const useYouTubeChannel = (url: string, setThisData: React.Dispatch<React.SetSta
         },
         refetchIntervalInBackground: false,
         refetchOnWindowFocus: false,
-        enabled: false
+        // enabled: false
     })
 
 }
