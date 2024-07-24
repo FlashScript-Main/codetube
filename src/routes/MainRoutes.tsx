@@ -15,7 +15,7 @@ const MainRoutes = () => {
     const location = useLocation();
 
     return (
-        <AnimatePresence initial={false} mode="popLayout">
+        <AnimatePresence mode="popLayout">
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Feed />} />
                 <Route path="/about" element={<React.Suspense fallback={<Loader />}><LazyAbout /></React.Suspense>} />
